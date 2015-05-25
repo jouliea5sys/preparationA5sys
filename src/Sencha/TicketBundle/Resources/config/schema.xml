@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database name="default" namespace="Sencha\TicketBundle\Model" defaultIdMethod="native">
+
+    <table name="message" phpName="Message" idMethod="native">
+        <column name="id" phpName="Id" type="INTEGER" primaryKey="true" autoIncrement="true" required="true"/>
+        <column name="username" phpName="Username" type="VARCHAR" size="32" required="true"/>
+        <column name="subject" phpName="Subject" type="VARCHAR" size="64" required="true"/>
+        <column name="email" phpName="Email" type="VARCHAR" size="32" required="false"/>
+        <column name="phone" phpName="Phone" type="VARCHAR" size="32" required="false"/>
+        <column name="header_mail" phpName="HeaderMail" type="LONGVARCHAR" required="false"/>
+        <column name="body" phpName="Body" type="LONGVARCHAR" required="false"/>
+        <column name="ip_address" phpName="IpAddress" type="VARCHAR" size="16" required="false"/>
+        <column name="status" phpName="Status" type="VARCHAR" size="16" required="false"/>
+        <column name="priority" phpName="Priority" type="VARCHAR" size="16" required="false"/>
+        <column name="source" phpName="Source" type="VARCHAR" size="16" required="false"/>
+        <column name="overdue_date" phpName="OverdueDate" type="TIMESTAMP" required="false"/>
+        <column name="last_response_date" phpName="LastResponseDate" type="TIMESTAMP" required="false"/>
+        <column name="creation_date" phpName="CreationDate" type="TIMESTAMP" required="false"/>
+        <column name="modification_date" phpName="ModificationDate" type="TIMESTAMP" required="false"/>
+        <behavior name="timestampable">
+            <parameter name="create_column" value="creation_date" />
+            <parameter name="update_column" value="modification_date" />
+        </behavior>
+        <behavior name="senchagridable" />
+        <index name="status_idx">
+            <index-column name="status"/>
+        </index>
+        <index name="priority_idx">
+            <index-column name="priority"/>
+        </index>
+        <index name="subject_idx">
+            <index-column name="subject"/>
+        </index>
+        <index name="email_idx">
+            <index-column name="email"/>
+        </index>
+    </table>
+
+</database>

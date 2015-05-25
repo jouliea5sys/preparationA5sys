@@ -1,0 +1,17 @@
+Sencha\TicketBundle\Model\Message:
+    Message_1:
+        username: anonymous
+        subject: 'Lorem ipsum dolor sit amet'
+        email: anonymous@test.com
+        body: 'Phasellus consequat nisl at vehicula adipiscing. Pellentesque...'
+        status: 'opened'
+        source: normal
+        source: web
+    Message_2:
+        username: anonymous
+        subject: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
+        email: anonymous@test.com
+        body: 'Donec convallis mattis nisi tincidunt elementum...'
+        status: 'opened'
+        source: normal
+        source: web
